@@ -1,7 +1,5 @@
 execute pathogen#infect()
 
-set nobackup
-
 set nocompatible
 filetype plugin on
 filetype on  " Automatically detect file types.
