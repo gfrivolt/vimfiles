@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+set nobackup
+
 set nocompatible
 filetype plugin on
 filetype on  " Automatically detect file types.
@@ -182,6 +184,7 @@ map <leader>n :call RenameFile()<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! PromoteToLet()
   :normal! dd
+  " :exec '?^\s*it\>'
   :normal! P
   :.s/\(\w\+\)\s*=\s*\(.*\)$/let(:\1) { \2 }/
   :normal ==
@@ -201,7 +204,6 @@ vmap < <gv
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
-let g:vimrubocop_keymap = 0
 nmap <leader>wv :tabedit $MYVIMRC<CR>
 nmap <leader>ww :tabedit $HOME/notes<CR>
 
@@ -289,10 +291,17 @@ command! Rroutes  :e config/routes.rb
 command! RTroutes :tabe config/routes.rb
 command! RSroutes :split config/routes.rb
 
+" Local config
+if filereadable(".vimrc.local")
+  source .vimrc.local
+endif
+
 " Color scheme
-set background=dark
-set t_Co=256
-let g:solarized_termcolors=256
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
 colorscheme solarized
 
 " highlight long lines
@@ -322,3 +331,5 @@ set viminfo^=!
 " alt+n or alt+p to navigate between entries in QuickFix
 map <silent> <m-p> :cp <cr>
 map <silent> <m-n> :cn <cr>
+
+set runtimepath^=~/.vim/bundle/ctrlp

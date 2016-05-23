@@ -34,3 +34,6 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
+[submodule "bundle/wakatime"]
+	path = bundle/wakatime
+	url = git://github.com/wakatime/vim-wakatime.git
