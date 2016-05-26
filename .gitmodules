@@ -37,3 +37,6 @@
 [submodule "bundle/wakatime"]
 	path = bundle/wakatime
 	url = git://github.com/wakatime/vim-wakatime.git
+[submodule "bundle/auto-pair"]
+	path = bundle/auto-pair
+	url = git://github.com/jiangmiao/auto-pairs.git
