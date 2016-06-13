@@ -135,6 +135,8 @@ if has("autocmd")
     \   exe "normal g`\"" |
     \ endif
 
+  autocmd BufReadPost *.raml set syntax=yaml
+
   autocmd FileType python     set omnifunc=pythoncomplete#Complete
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType html       set omnifunc=htmlcomplete#CompleteTags
