@@ -40,3 +40,6 @@
 [submodule "bundle/auto-pair"]
 	path = bundle/auto-pair
 	url = git://github.com/jiangmiao/auto-pairs.git
+[submodule "bundle/coffee"]
+	path = bundle/coffee
+	url = git@github.com:kchmck/vim-coffee-script.git
