@@ -49,3 +49,9 @@
 [submodule "bundle/elixir"]
 	path = bundle/elixir
 	url = git@github.com:elixir-lang/vim-elixir.git
+[submodule "bundle/pug"]
+	path = bundle/pug
+	url = git://github.com/digitaltoad/vim-pug.git
+[submodule "bundle/cjsx"]
+	path = bundle/cjsx
+	url = git@github.com:mtscout6/vim-cjsx.git
